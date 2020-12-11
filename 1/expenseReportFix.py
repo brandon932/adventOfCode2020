@@ -7,7 +7,7 @@ def get_expenses():
         for row in csv_reader:
             expenses.append(row[0])
         return expenses
-def my_func():
+def first():
     expenses = get_expenses()
     for expense in expenses:
         x = int(expense)
@@ -36,7 +36,7 @@ def seccond():
     print("hello world")
 
 if value == 1:
-    my_func()
+    first()
 elif value == 2:
     seccond()
 
