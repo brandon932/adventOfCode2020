@@ -1,0 +1,26 @@
+import csv
+def getData():
+    with open("data.csv") as csv_file:
+        csv_reader = csv.reader(csv_file)
+        data = []
+        for row in csv_reader:
+            dataRow = list(row[0])
+            data.append(dataRow)
+        return data
+def findTrees():
+    #zero indexed length
+    length = 30 
+    treeCount = 0
+    yCount = 0 
+    data = getData()
+    for row in data:
+        if row[yCount] == "#":
+            treeCount += 1
+            print yCount
+        yCount += 3
+        if yCount >= 31:
+            yCount -= length
+        #print treeCount 
+
+    return treeCount
+findTrees()
