@@ -1,7 +1,7 @@
 def scanData():
     with open("data.csv") as input_file:
         data_str = input_file.read()
-        bordingPassArray = data_str.split('\n')
+        bordingPassArray = list(filter(None,data_str.split('\n')))
         return bordingPassArray
 
 def convertToInt(binaryString):
@@ -12,17 +12,19 @@ def convertToInt(binaryString):
     return int(string, 2)
 
 def getBordingPassId():
-    higestPassId = 0
     passList = scanData()
     for data in passList:
         row = convertToInt(data[:7])
         seat = convertToInt(data[-3:])
         passId = (row * 8) + seat
-        if passId> higestPassId:
+
+def getHighestPassId(seatIdList):
+    higestPassId = 0
+    for seatId in seatIdList
+    if seatId > seatId:
             higestPassId = passId
-        print higestPassId
+    print higestPassId
     return higestPassId
 
-getBordingPassId()
 
 
