@@ -19,3 +19,9 @@ def getTotalCustoms():
     print count
     return count
 getTotalCustoms()
+
+def checkAllSheets():
+    customsArray = getData()
+    for customsSheet in customsArray:
+
+
